@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/box_one"
+        style="@style/BoxParametrs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_box"
+        android:layout_marginTop="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_box"
+        android:text="Box One"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/box_two"
+        style="@style/BoxParametrs"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/margin_box"
+        android:layout_marginTop="@dimen/margin_box"
+        android:text="Box two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_one" />
+
+    <TextView
+        android:id="@+id/box_three"
+        style="@style/BoxParametrs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_box"
+        android:text="Box three"
+        app:layout_constraintBottom_toTopOf="@+id/box_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/box_two"
+        app:layout_constraintTop_toTopOf="@id/box_two"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/box_four"
+        style="@style/BoxParametrs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_box"
+        android:text="Box four"
+        app:layout_constraintBottom_toTopOf="@+id/box_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box_two"
+        app:layout_constraintTop_toBottomOf="@+id/box_three"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/box_five"
+        style="@style/BoxParametrs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_box"
+        android:text="Box five"
+        app:layout_constraintBottom_toBottomOf="@id/box_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box_two"
+        app:layout_constraintTop_toBottomOf="@+id/box_four" />
+
+    <TextView
+        android:id="@+id/HowToPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:fontFamily="@font/roboto"
+        android:text="How to play"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Tap the screen and buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HowToPlay"
+        app:layout_constraintTop_toBottomOf="@+id/box_two"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <Button
+        android:id="@+id/first_button"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/second_button"
+        app:layout_constraintEnd_toStartOf="@+id/second_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/third_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/first_button" />
+
+    <Button
+        android:id="@+id/third_button"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/second_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/second_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
